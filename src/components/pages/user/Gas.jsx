@@ -14,7 +14,7 @@ function Gas() {
   const feeRef1 = useRef();
   const countMin = useRef();
   const countSec = useRef();
-  const [socket, setSocket] = useState();
+  const socket = io("https://gasfee-backend.onrender.com"); // Replace with your server URL
 
   const options = [
     { value: 'eth', label: 'Etherum' },
@@ -131,8 +131,6 @@ function Gas() {
   });
 
   useEffect(() => {
-  const socket = io("https://gasfee-backend.onrender.com/"); // Replace with your server URL
-  setSocket(socket);
     socket.on("connect", () => {
       console.log("Connected to server");
     });
