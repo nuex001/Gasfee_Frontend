@@ -1,0 +1,109 @@
+.sign {
+    width: 100%;
+    height: calc(100vh - 12em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign form {
+    width: 400px;
+    height: auto;
+    padding: 2em;
+    background: var(--bg2);
+    border-radius: 10px;
+}
+
+.sign form h1 {
+    color: var(--text);
+    text-align: center;
+    font-size: 6em;
+}
+
+.sign form .row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5em; */
+    margin: 1em 0em;
+    margin-top: 3em;
+}
+
+.sign form label {
+    font-size: 2em;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.sign form .row input {
+    width: 100%;
+    height: 40px;
+    padding: 1em 0em;
+    color: var(--text);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--text2);
+    outline: none;
+}
+
+.sign form .row input::placeholder {
+    color: var(--text2);
+}
+
+.sign form .row span {
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.sign form .row span.bad {
+    color: red;
+}
+
+.sign form .row span.good {
+    color: green;
+}
+
+.sign form button {
+    display: block;
+    font-size: 1.6em;
+    padding: 1em 2.5em;
+    color: var(--text);
+    background-color: var(--bg);
+    border: none;
+    border-radius: 5px;
+    margin: 2em auto;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.sign form p {
+    color: var(--text2);
+    font-size: 1.4em;
+    margin-top: 1em
+}
+
+.sign form p a {
+    color: var(--text);
+    text-decoration: underline;
+    padding-right: 0.4em;
+}
+
+
+
+
+
+
+/**********************MOBILE RES[PONSIVENESS***************************************/
+@media (max-width:768px) {
+    .sign {
+        padding: 2em 2em;
+    }
+
+    .sign form {
+        width: 100%;
+    }
+    .sign form h1 {
+        font-size: 4em;
+    }
+}

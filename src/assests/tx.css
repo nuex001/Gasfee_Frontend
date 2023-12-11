@@ -1,0 +1,64 @@
+.user .tx {
+    width: 100%;
+    min-height: calc(100vh - 15em);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4em 4em;
+}
+
+.user .tx table {
+    width: 2000px;
+    min-height: calc(100vh - 15em);
+}
+
+.user .tx table tr {
+    width: 100%;
+    display: flex;
+    gap: 4em;
+    color: var(--text);
+    margin: 1em 0em;
+}
+
+.user .tx table tr th {
+    width: 16%;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.user .tx table tr td {
+    width: 16%;
+    font-size: 1.8em;
+    text-align: left;
+}
+
+.user .tx table tr td.chain {
+    text-transform: uppercase;
+}
+
+
+
+/**********************MOBILE RES[PONSIVENESS***************************************/
+@media (max-width:768px) {
+    .user .tx {
+        overflow-x: scroll;
+        padding: 0em 0em;
+        flex-shrink: 0;
+    }
+
+    .user .tx table tr th {
+        width: 20%;
+        font-size: 1.8em;
+    }
+    .user .tx table  tr {
+        gap: 2em;
+    }
+
+    .user .tx table tr td {
+        width: 20%;
+        font-size: 1em;
+    }
+
+
+}
