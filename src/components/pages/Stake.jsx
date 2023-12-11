@@ -92,7 +92,17 @@ function Stake() {
                             chain: "",
                         });
                     } else { //if matic
-
+                        const eth_contract = new ethers.Contract(
+                            MATIC_CONTRACT_ADDRESS,
+                            ETH_ABI,
+                            signer
+                        );
+                        const tx = await eth_contract.withdrawStake();
+                        successMsg("Withdraw Stake made successfully");
+                        setFormdata({
+                            amount: 0,
+                            chain: "",
+                        });
                     }
                 } else {
                     errorMsgs("Connect Wallet please");
@@ -105,7 +115,6 @@ function Stake() {
                 errorMsgs("Low funds currently in the contract");
             }
         }
-
     }
 
     return (
